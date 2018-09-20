@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de" class="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/standard.css" />
+    <link rel="stylesheet" type="text/css" href="css/schedule.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+
+    <div>
+      <div class="inputfield">
+        <div class="center">
+          <span class="dur" >Description</span>
+          <input type="text" style="width:20vw;" id="descr" />
+          <span id ="time">
+            <span class="dur">Start</span>
+            <input type="text" class="time start" />
+            <span class="dur">End</span>
+            <input type="text" class="time end" />
+          </span>
+          <input type="color" value="#ff0000" id="color">
+          <span class="dur">Day</span>
+          <select class="week" style="width:10%;" name="states[]" multiple="multiple" id="Day">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="0">Sunday</option>
+          </select>
+          <input type="submit" onclick="saveInput()" />
+          <input type="submit" value="reset" onclick="reset()" />
+          <div class="table"></div>
+        </div>
+      </div>
+      <i class="material-icons md-24" id="hide" onclick="hide()">dehaze</i>
+    </div>
+    <div id="timetable"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datepair.js@0.4.16/dist/jquery.datepair.min.js"></script>
+
+    <script src="js/scheduler.js"></script>
+  </body>
+</html>

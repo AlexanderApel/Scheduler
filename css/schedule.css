@@ -1,0 +1,129 @@
+input[type=text] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    height: 40%;
+    font-size: 2vw;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: text;
+    border-radius: 2px;
+}
+
+input[type=text]:focus {
+    outline: 0;
+}
+
+input[type=submit] {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: transparent;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    margin-left: 1%;
+    height: auto;
+    font-size: 2vw;
+    text-shadow: 4px 4px 4px black;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: #00ccff;
+}
+
+input[type=submit]: {
+    color: #00ccff;
+}
+
+input[type=submit]:focus {
+    outline: 0;
+}
+
+input[type=submit]:active {
+    color: #00cccc;
+}
+
+input[type="color"] {
+    opacity: 0 -webkit-appearance: none;
+    border: none;
+    outline: 0;
+    width: 2vw;
+    height: 2vw;
+    vertical-align: middle;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.inputfield {
+    display: table;
+    height: 10vmin;
+    border-bottom: 2px solid white;
+}
+
+.center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.dur {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2vw;
+    color: white;
+}
+
+#color {
+    display: inline-block;
+}
+
+
+select:focus {
+    outline: 0;
+}
+
+
+.select2-selection__rendered {
+
+    line-height: 3vh !important;
+    max-height: 5vh !important;
+
+}
+
+#timetable {
+    margin: auto;
+    height: 100%;
+    width:80%;
+    margin-top: 16px;
+}
+
+.table-style {
+    color: white;
+    font-size: 3vw;
+    width: 80%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 3px 5px;
+}
+
+.cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+#hide{
+    float: right;
+    font-size:5vw;
+    color:#F7F9F9;
+    cursor: pointer;
+}

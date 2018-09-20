@@ -1,0 +1,84 @@
+#ok {
+    height: 100vh;
+}
+
+div:focus {
+    outline: none;
+}
+
+.bg {
+    height: auto !important;
+    min-height: 100%;
+    /*background : radial-gradient(#333333, #666666);
+    background: #4b6cb7;  /* fallback for old browsers */
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+#logo {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon {
+    word-spacing: 10vw;
+    position: fixed;
+    margin: auto;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    top: 80vh;
+    color: #F7F9F9;
+}
+
+.material-icons.md-24 {
+    font-size: 10vh;
+    text-shadow: 0 0 5px black;
+    opacity: 0.9;
+}
+
+.descr {
+    visibility: hidden;
+    word-spacing: 7vw;
+    font-size: 5vh;
+    text-shadow: 0 0 5px black;
+}
+
+a:visited, a:link {
+    color: inherit;
+}
+
+a.aboutme:hover {
+    color: #6CCFF6;
+}
+
+a.projects:hover {
+    color: #6CCFF6;
+}
+
+a.contact:hover {
+    color: #6CCFF6;
+}
+
+.block {
+    text-align: center;
+    display: block;
+}
