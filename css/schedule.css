@@ -125,7 +125,7 @@ select:focus {
 #hide{
     position: absolute;
     left: 1%;
-    font-size:5vw;
+    font-size:3.5vw;
     color:#F7F9F9;
     cursor: pointer;
 }
