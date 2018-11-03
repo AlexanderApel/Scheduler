@@ -109,16 +109,16 @@ function create() {
     }
 
     $('#timetable').empty()
+    //new table with class attribut table-style
+
     for (n = 0; n < DaysOfWeek; n++) {
+        tbl = $('<table> </table>').addClass('table-style')
         if (checkBox.checked == false) {
             d = new Date()
             n = d.getDay()
             //only the current day will be displayed
         }
         if (week[n].length !== 0) {
-
-            //new table with class attribut table-style
-            tbl = $('<table> </table>').addClass('table-style')
 
             //reiterate all entries
             for (i = 0; i < week[n].length; i++) {
@@ -128,39 +128,40 @@ function create() {
                     //create new row
                     var tr = $('<tr></tr>')
 
-
                     //create first cell, set contet with class attribut "cell","info" and "pos" and append to the row
                     //If show week is checked add the corresponding day to the table as a new column
                     if (checkBox.checked == true) {
                         var td0 = $('<td contentEditable></td>')
-                        WeekNumberToString = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                        WeekNumberToString = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
                         td0.html(WeekNumberToString[n]).css({
                             backgroundColor: 'rgba(' + color + ', .2)',
-                            outline: 'none'
+                            outline: 'none',
+                            width: '10%',
+                            maxWidth: '0'
                         })
                         td0.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
                         //if the day is changed afterweards, update it in the array
                         $(td0).on('input', function() {
                             switch ($(this).text()) {
-                                case "Monday":
+                                case "Mon":
                                     day = 1
                                     break
-                                case "Tuesday":
+                                case "Tue":
                                     day = 2
                                     break
-                                case "Wednesday":
+                                case "Wed":
                                     day = 3
                                     break
-                                case "Thursday":
+                                case "Thu":
                                     day = 4
                                     break
-                                case "Friday":
+                                case "Fri":
                                     day = 5
                                     break
-                                case "Saturday":
+                                case "Sat":
                                     day = 6
                                     break
-                                case "Sunday":
+                                case "Sun":
                                     day = 0
                                     break
                                 default:
@@ -185,7 +186,10 @@ function create() {
                     var td1 = $('<td contentEditable></td>')
                     td1.html(week[n][i].start + '</br>' + week[n][i].end).css({
                         backgroundColor: 'rgba(' + color + ', .2)',
-                        outline: 'none'
+                        outline: 'none',
+                        width: '20%',
+                        maxWidth: '0',
+                        minWidth: '20%'
                     })
                     td1.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
                     //if the time is changed afterweards, update it in the array
@@ -216,10 +220,14 @@ function create() {
                     var td2 = $('<td contentEditable></td>')
                     td2.html(week[n][i].description).css({
                         backgroundColor: 'rgba(' + color + ', .2)',
-                        outline: 'none'
+                        outline: 'none',
+                        width: '50%',
+                        maxWidth: '0',
+                        fontSize: 'auto'
                     })
                     td2.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
                     //if the description is changed afterweards, update it in the array
+
                     $(td2).on('input', function() {
                         var descr = $(this).text()
                         week[$(this).attr("data-cell-n")][$(this).attr("data-cell-i")].description = descr
@@ -245,8 +253,9 @@ function create() {
 
                     var td3 = $('<td>x</td>').css({
                         cursor: 'pointer',
-                        backgroundColor: 'transparent '
-                    });
+                        backgroundColor: 'transparent ',
+                        width: '2%'
+                    })
                     td3.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
 
                     //on click delete this row
@@ -261,6 +270,8 @@ function create() {
                         create()
                     })
                     td3.addClass('cell info').appendTo(tr)
+
+
 
                     //append row to the table
                     tbl.append(tr)
@@ -282,7 +293,6 @@ function rearrange() {
             var y = b.start
             return ((x < y) ? -1 : ((x > y) ? 1 : 0))
         })
-
     }
 }
 

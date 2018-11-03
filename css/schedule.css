@@ -102,17 +102,18 @@ select:focus {
 #timetable {
     margin: auto;
     height: 100%;
-    width:80%;
+    width:90vw;
     margin-top: 16px;
 }
 
 .table-style {
     color: white;
     font-size: 3vw;
-    width: 80%;
+    width: 90%;
     margin: auto;
     border-collapse: separate;
     border-spacing: 3px 5px;
+    padding-bottom: 6px;
 }
 
 .cell {
