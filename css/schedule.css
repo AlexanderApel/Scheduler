@@ -113,7 +113,7 @@ select:focus {
     margin: auto;
     border-collapse: separate;
     border-spacing: 3px 5px;
-    
+
 }
 
 .cell {
@@ -124,7 +124,7 @@ select:focus {
 
 #hide{
     position: absolute;
-    float: right;
+    left: 1%;
     font-size:5vw;
     color:#F7F9F9;
     cursor: pointer;
