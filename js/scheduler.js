@@ -12,6 +12,8 @@ $(document).ready(function() {
     $('.week').select2()
 
 })
+var checkBox = document.getElementById("show_week")
+
 // if values already exist get them else create them
 if (localStorage.timetable == null) {
     week = []
@@ -20,6 +22,11 @@ if (localStorage.timetable == null) {
     }
 } else {
     week = JSON.parse(localStorage.getItem("timetable"))
+}
+
+if (localStorage.checkBox != null) {
+
+    checkBox.checked = JSON.parse(localStorage.getItem("checkBox"))
 }
 
 if (localStorage.pos == null) {
@@ -100,9 +107,9 @@ function colorconverter(color) {
 }
 //create the timetable
 function create() {
-    var checkBox = document.getElementById("show_week")
-    DaysOfWeek = 1
 
+    DaysOfWeek = 1
+    localStorage.setItem("checkBox", JSON.stringify(checkBox.checked))
     if (checkBox.checked == true) {
         //every day will be added to the viewport and a column with the corresponding day is added
         DaysOfWeek = 7
@@ -116,6 +123,7 @@ function create() {
         if (checkBox.checked == false) {
             d = new Date()
             n = d.getDay()
+
             //only the current day will be displayed
         }
         if (week[n].length !== 0) {
