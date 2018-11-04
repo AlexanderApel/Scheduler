@@ -145,7 +145,8 @@ function create() {
                             backgroundColor: 'rgba(' + color + ', .2)',
                             outline: 'none',
                             width: '10%',
-                            maxWidth: '0'
+                            maxWidth: '0',
+                            borderRadius:'5px',
                         })
                         td0.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
                         //if the day is changed afterweards, update it in the array
@@ -197,7 +198,8 @@ function create() {
                         outline: 'none',
                         width: '20%',
                         maxWidth: '0',
-                        minWidth: '20%'
+                        borderRadius:'5px',
+
                     })
                     td1.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
                     //if the time is changed afterweards, update it in the array
@@ -231,7 +233,9 @@ function create() {
                         outline: 'none',
                         width: '50%',
                         maxWidth: '0',
-                        fontSize: 'auto'
+                        fontSize: 'auto',
+                        borderRadius:'5px',
+
                     })
                     td2.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
                     //if the description is changed afterweards, update it in the array
@@ -262,7 +266,8 @@ function create() {
                     var td3 = $('<td>x</td>').css({
                         cursor: 'pointer',
                         backgroundColor: 'transparent ',
-                        width: '2%'
+                        width: '2%',
+                        borderRadius:'5px',
                     })
                     td3.attr("data-cell-i", i).attr("data-cell-n", n).attr("data-cell-pos", week[n][i].pos)
 
